@@ -1,6 +1,6 @@
 {
   "name": "redux-storage-engine-indexed-db",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "window.indexedDB engine for redux-storage",
   "main": "build/index.js",
   "scripts": {
