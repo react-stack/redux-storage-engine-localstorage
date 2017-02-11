@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "window.indexedDB engine for redux-storage",
   "main": "build/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "make lint test build"
   },
@@ -39,7 +40,7 @@
     "eslint": "^1.10.3",
     "eslint-config-michaelcontento": "^1.1.1",
     "eslint-plugin-mocha-only": "0.0.3",
-    "idb": "^2.0.0",
+    "idb-keyval": "^2.3.0",
     "mocca": "^1.0.3",
     "release-it": "^2.3.1"
   }
