@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "window.indexedDB engine for redux-storage",
   "main": "build/index.js",
-  "module": "src/index.js",
   "scripts": {
     "test": "make lint test build"
   },
@@ -43,5 +42,8 @@
     "idb-keyval": "^2.3.0",
     "mocca": "^1.0.3",
     "release-it": "^2.3.1"
+  },
+  "dependencies": {
+    "idb-keyval": "^2.3.0"
   }
 }
