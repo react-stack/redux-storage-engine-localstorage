@@ -1,6 +1,8 @@
-# [redux-storage-engine-indexed-db][]
+#redux-storage-engine-indexed-db
 
-`window.indexedDB` based engine for [redux-storage][].
+[![build](https://api.travis-ci.org/prateekbh/redux-storage-engine-indexed-db.svg?branch=master)](https://api.travis-ci.org/prateekbh/redux-storage-engine-indexed-db.svg?branch=master)
+
+`window.indexedDB` based engine for [redux-storage](https://github.com/react-stack/redux-storage).
 
 ## Installation
 
