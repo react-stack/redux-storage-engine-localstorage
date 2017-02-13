@@ -1,26 +1,24 @@
-import idbKeyVal from 'idb-keyval';
-
 describe('engine', () => {
-    describe('load', () => {
-        it('should reject if json cannot be loaded', async () => {
-            await idbKeyVal.set('key', 'val');
-            await idbKeyVal.set('key1');
+    const returnVal = 'SOME_VAL';
+    const idbKeyVal = {
+        set: sinon.stub().returns(new Promise((resolve) => {
+            resolve(returnVal);
+        })),
+        get: sinon.stub().returns(new Promise((resolve) => {
+            resolve(returnVal);
+        })),
+    };
+    describe('check proxies', () => {
+        it('should call the idbKeyVal set method and return the response as it is', async () => {
+            const result = await idbKeyVal.set('key', 'val');
+            idbKeyVal.set.should.have.been.calledWith('key', 'val');
+            result.should.equal(returnVal);
         });
 
-        it('should resolve with data', async () => {
-            await idbKeyVal.set('key', 'val');
-            const result = await idbKeyVal.set('key');
-            result.should.equal('val');
-        });
-    });
-
-    describe('save', () => {
-        it('should asve via setItem', async () => {
-
-        });
-
-        it('should load with the given key', async () => {
-
+        it('should call the idbKeyVal get method and return the response as it is', async () => {
+            const result = await idbKeyVal.get('key');
+            idbKeyVal.get.should.have.been.calledWith('key');
+            result.should.equal(returnVal);
         });
     });
 });
