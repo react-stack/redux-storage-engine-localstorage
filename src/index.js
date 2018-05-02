@@ -1,20 +1,11 @@
-function rejectWithMessage(error) {
-    return Promise.reject(error.message);
-}
+import idbKeyVal from 'idb-keyval';
 
-export default (key, replacer, reviver) => ({
+export default (store) => ({
     load() {
-        return new Promise((resolve) => {
-            const jsonState = localStorage.getItem(key);
-            resolve(JSON.parse(jsonState, reviver) || {});
-        }).catch(rejectWithMessage);
+        return idbKeyVal.get(store);
     },
 
     save(state) {
-        return new Promise((resolve) => {
-            const jsonState = JSON.stringify(state, replacer);
-            localStorage.setItem(key, jsonState);
-            resolve();
-        }).catch(rejectWithMessage);
+        return idbKeyVal.set(store, state);
     }
 });
