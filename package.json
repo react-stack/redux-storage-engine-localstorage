@@ -1,27 +1,26 @@
 {
-  "name": "redux-storage-engine-localstorage",
-  "version": "1.1.4",
-  "description": "window.localStorage engine for redux-storage",
+  "name": "redux-storage-engine-indexed-db",
+  "version": "1.0.0",
+  "description": "window.indexedDB engine for redux-storage",
   "main": "build/index.js",
+  "module": "src/index.js",
   "scripts": {
+    "build": "make build",
     "test": "make lint test build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-stack/redux-storage-engine-localstorage.git"
+    "url": "https://github.com/prateekbh/redux-storage-engine-indexed-db.git"
   },
-  "bugs": "https://github.com/react-stack/redux-storage-engine-localstorage/issues",
-  "homepage": "https://github.com/react-stack/redux-storage-engine-localstorage",
+  "bugs": "https://github.com/prateekbh/redux-storage-engine-indexed-db/issues",
+  "homepage": "https://github.com/prateekbh/redux-storage-engine-indexed-db",
   "keywords": [
     "redux",
     "redux-storage",
     "redux-storage-engine",
-    "localStorage"
+    "indexed-db"
   ],
-  "author": [
-    "Michael Contento <mail@michaelcontento.de>",
-    "Guns <gunjan.soni2002@gmail.com>"
-  ],
+  "author": "Prateek Bhatnagar <prateek89born@gmail.com>",
   "files": [
     "build/",
     "src",
@@ -40,7 +39,11 @@
     "eslint": "^1.10.3",
     "eslint-config-michaelcontento": "^1.1.1",
     "eslint-plugin-mocha-only": "0.0.3",
+    "idb-keyval": "^2.3.0",
     "mocca": "^1.0.3",
     "release-it": "^2.3.1"
+  },
+  "dependencies": {
+    "idb-keyval": "^2.3.0"
   }
 }
