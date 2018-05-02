@@ -1,11 +1,15 @@
 import idbKeyVal from 'idb-keyval';
 
-export default (store) => ({
-    load() {
-        return idbKeyVal.get(store);
-    },
+const idb = function idb(store) {
+    return {
+        load() {
+            return idbKeyVal.get(store);
+        },
 
-    save(state) {
-        return idbKeyVal.set(store, state);
-    }
-});
+        save(state) {
+            return idbKeyVal.set(store, state);
+        }
+    };
+};
+
+export default idb;
