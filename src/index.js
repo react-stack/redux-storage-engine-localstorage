@@ -1,6 +1,6 @@
 import idbKeyVal from 'idb-keyval';
 
-let idb = function idb(store) {
+const idb = function idb(store) {
     return {
         load() {
             return idbKeyVal.get(store);
